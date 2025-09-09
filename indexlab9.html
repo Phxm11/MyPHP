@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+     <h1 id="x1" onmouseover="changeText('ครับอ้าย','red')" onmouseout="changeText('สัสดีจ้า','green')" class="text-center text-danger fw-bold fs-1 mt-5 mb-5 p-5">Hello</h1>
+<div  class="d-flex justify-content-center align-items-center vh-100 gap-3 flex-warap">
+   
+    <button type = "button" onclick="document.getElementById('x1').style.display = 'none'" class=" btn btn-danger">ซ่อน</button>
+    <button type = "button" onclick="document.getElementById('x1').style.display = 'block'" class=" btn btn-success ">แสดง</button>
+    <button tpye="button" onclick="alert('สวัสดี')" class = "btn btn-primary">alert box</button>
+    <button onclick="cbox()" class = "btn btn-primary ">confrim box</button>
+</div>
+    <script>
+        function changeText(t,c){
+            document.getElementById("x1").innerHTML = t;
+            document.getElementById("x1").style.color = c;
+            document.getElementById("x1").style.fontSize = "25px";
+        }
+    function hide(){
+        document.getElementById("x1").style.display = "none";
+    }
+    function show(){
+        document.getElementById("x1").style.display = "block";
+    
+    }
+    function cbox(){
+        var c = confirm("ยืนยันการเข้าสู่ระบบ");
+        if(c){
+            alert("กดตกลงแล้ว");
+        }else{
+            alert("กดยกเลิกแว้ง");
+        }
+    }
+
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
